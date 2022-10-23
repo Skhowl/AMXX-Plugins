@@ -1,0 +1,10 @@
+[en]
+DM_ITEM_NO_RELOAD = You don't need to reload!
+DM_ITEM_HELM = You are now headshot immune!
+DM_ITEM_BOOTS = You run now^4 %d%%^1 faster!
+DM_ITEM_PERIAPT = Your health is increased by^4 %.2f^1 points!
+DM_ITEM_AMULET = Nobody can hear your footsteps!
+DM_ITEM_SOCK = Your gravity is reduced by^4 %d%%^1!
+DM_ITEM_MASK = You recover^4 %.2f%%^1 damage to health per shot!
+DM_ITEM_RIBBON = You have a chance of^4 %d%%^1 to dodging a shot!
+DM_ITEM_PLASTER = You don't feel pain shock now!

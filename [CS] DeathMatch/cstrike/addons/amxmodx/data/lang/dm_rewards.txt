@@ -1,0 +1,15 @@
+[en]
+DM_REWARD_TER_DEFEATED = TERRORs defeated,x03 CTsx01 getx04 $%dx01.
+DM_REWARD_CT_DEFEATED = CTs defeated,x03 TERRORsx01 getx04 $%dx01.
+DM_REWARD_BOMB_PLANTED = Bomb has been planted,x03 %sx01 getx04 $%dx01.
+DM_REWARD_BOMB_DEFUSED = Bomb has been defused, allx03 CTsx01 getx04 $%dx01 andx03 %sx01 getx04 $%dx01 extra.
+DM_REWARD_BOMBED = Target bombed, allx03 TERRORsx01 getx04 $%dx01.
+DM_REWARD_SAVED = Target saved, allx03 CTsx01 getx04 $%dx01.
+DM_REWARD_VIP_DIED = Vip assassinated, allx03 TERRORsx01 getx04 $%dx01 andx03 %sx01 getx04 $%dx01 extra.
+DM_REWARD_VIP_ESCAPED = Vip escaped, allx03 CTsx01 getx04 $%dx01 andx03 %sx01 getx04 $%dx01 extra.
+DM_REWARD_VIP_NOT_ESCAPED = Vip not escaped, allx03 TERRORsx01 getx04 $%dx01.
+DM_REWARD_TOUCHED = %sx01 touched a Hostage and getx04 $%dx01.
+DM_REWARD_RESCUED_ID = Hostage rescued, allx03 CTsx01 getx04 $%dx01 andx03 %sx01 getx04 $%dx01 extra.
+DM_REWARD_RESCUED = Hostage rescued, allx03 CTsx01 getx04 $%dx01.
+DM_REWARD_NOT_RESCUED = %dx01 hostage not rescued, allx03 TERRORsx01 getx04 $%dx01.
+DM_REWARD_KILLED = Hostage killed,x04 %sx01 getx04 $%dx01 for that.

@@ -1,0 +1,17 @@
+[en]
+DM_ITEM_EMPTY = Item slot %d is empty.
+DM_ITEM_DELETE_USAGE = Usage:x04 /deletex01 <item chatcmd, item slot>
+DM_ITEM_CHAT = Type in chatx03 itemsx01 orx03 shopx01 to openx04 shop menux01.
+DM_ITEM_NO_ITEM_TEAM = No items available for your team.
+DM_ITEM_IS_NOT_TEAM = Item isn't available for your team.
+DM_ITEM_NO_MONEY = Not enough money.
+DM_ITEM_LIMIT = Maximum number of items reached.
+DM_ITEM_ALREADY = You already havex04 %sx01.
+DM_ITEM_SEVERAL = You can buy one item several times to increase his duration.
+DM_ITEM_SUBJECT = (subject to change)
+DM_ITEM_ROUND = Round based.
+DM_ITEM_MAP = Map based.
+DM_ITEM_TIME = Time based.
+DM_ITEM_HUD_ACTIVE = Active Items
+DM_ITEM_HUD_EMPTY = empty
+DM_ITEM_HUD_NAME = Name

@@ -1,0 +1,5 @@
+[en]
+DM_HOSTAGE_STEAL = Youx03 can't stealx01 hostages.
+DM_HOSTAGE_SPAWNPOINT = Unstuck hostage to his spawnpoint.
+DM_HOSTAGE_UNSTUCK = Unstuck hostage.
+DM_HOSTAGE_FOLLLOW = Unstuck hostage to following CT.

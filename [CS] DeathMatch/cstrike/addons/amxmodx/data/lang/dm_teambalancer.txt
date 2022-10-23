@@ -1,0 +1,5 @@
+[en]
+DM_BALANCER_YOU_TER = You have beenx04 switchedx01 to teamx03 TERRORISTx01.
+DM_BALANCER_YOU_CT = You have beenx04 switchedx01 to teamx03 CTx01.
+DM_BALANCER_DYING_TER = Next Dyingx04 CTx01 will be switched tox03 TERRORISTx01 team.
+DM_BALANCER_DYING_CT = Next Dyingx04 TERRORISTx01 will be switched tox03 CTx01 team.

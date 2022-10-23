@@ -1,0 +1,16 @@
+[en]
+DM_SPAWN_LIMIT = Add Spawn - Limit reached
+DM_SPAWN_ADD = Add Spawn - Current position
+DM_SPAWN_EDIT_NONE = Edit Spawn - No spawns
+DM_SPAWN_EDIT_MARKED = Edit Spawn - No spawn marked
+DM_SPAWN_EDIT_MOVE = Move closest spawn (yellow) to current position
+DM_SPAWN_DEL_NONE = Delete Spawn - No spawns
+DM_SPAWN_DEL_MARKED = Delete Spawn - No spawn marked
+DM_SPAWN_DEL_AWAY = Delete Spawn - Marked spawn is to far away
+DM_SPAWN_DEL_CLOSEST = Delete closest spawn
+DM_SPAWN_REFRESH = Refresh closest spawn
+DM_SPAWN_ALL = Team: All
+DM_SPAWN_TER = Team: Terror
+DM_SPAWN_CT = Team: CT
+DM_SPAWN_SHOW = Show statistics
+DM_SPAWN_STATISTICS = Total Spawns:x04 %dx01 Current Origin: X: %d  Y: %d  Z: %d

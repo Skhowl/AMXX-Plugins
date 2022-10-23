@@ -1,0 +1,21 @@
+[en]
+DM_BANK_ENABLED = This server has ax03 auto bankx01.
+DM_BANK_DISABLED = Bankx03 disabledx01 for maintenance.
+DM_BANK_ADMIN = Admin
+DM_BANK_NAME = Name
+DM_BANK_MONEY = Money
+DM_BANK_ALL_GIVE = Give all playersx04 $%dx01.
+DM_BANK_ALL_REMOVE = Removex04 $%dx01 from all players.
+DM_BANK_ALL_SET = Set money for all players tox04 $%dx01.
+DM_BANK_CT_GIVE = Give allx03 CTsx04 $%dx01.
+DM_BANK_CT_REMOVE = Removex04 $%dx01 from allx03 CTsx01.
+DM_BANK_CT_SET = Set money for allx03 CTsx01 tox04 $%dx01.
+DM_BANK_TER_GIVE = Give allx03 TERRORsx04 $%dx01.
+DM_BANK_TER_REMOVE = Removex04 $%dx01 from allx03 TERRORsx01.
+DM_BANK_TER_SET = Set money for allx03 TERRORsx01 tox04 $%dx01.
+DM_BANK_PERSONAL_GIVE = Give you $%dx01.
+DM_BANK_PERSONAL_REMOVE = Removex04 $%dx01 from you.
+DM_BANK_PERSONAL_SET = Set your money tox04 $%dx01.
+DM_BANK_DONATE_USAGE = Usage:x04 /donatex01 <target> <amount>
+DM_BANK_DONATE_NOT_FOUND = Client with that name (%s) is not found.
+DM_BANK_DONATE_SUCCESS = %sx01 donatedx03 %sx04 $%dx01 from his account.

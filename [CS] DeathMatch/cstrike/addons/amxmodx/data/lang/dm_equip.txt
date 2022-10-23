@@ -1,0 +1,13 @@
+[en]
+DM_EQUIP_ENABLE = Your equip menu has beenx04 re-enabledx01.
+DM_EQUIP_ALREADY = Your equip menu isx04 already enabledx01.
+DM_EQUIP_AUTO = Typex03 gunsx01 in chat tox04 re-enablex01 your equip menu.
+DM_EQUIP_LIMIT = Weaponx04 %sx01 reached limit.
+DM_EQUIP_NEW = New Weapons
+DM_EQUIP_RANDOM = Random Weapons
+DM_EQUIP_PREVIOUS = Previous Setup
+DM_EQUIP_AUTOMATIC = Automatic - Don't show menu again
+DM_EQUIP_ARMOR = Armor
+DM_EQUIP_HELM = Helmet
+DM_EQUIP_GRENS_ALL = All Grenades
+DM_EQUIP_GRENS_NO = No Grenades

@@ -1,0 +1,60 @@
+//
+// All possible bd_reset commands!
+//
+
+// Strings
+bd_reset all		// All
+bd_reset ak47		// CV-47
+bd_reset aug		// Bullpup
+bd_reset awp		// Magnum Sniper Rifle
+bd_reset deagle		// Night Hawk .50C
+bd_reset elite		// .40 Dual Elites
+bd_reset famas		// Clarion 5.56
+bd_reset fiveseven	// ES Five-Seven
+bd_reset g3sg1		// D3/AU1
+bd_reset galil		// IDF Defender
+bd_reset glock18	// 9x19mm Sidearm
+bd_reset he		// HE Grenade
+bd_reset knife		// Knife
+bd_reset m249		// M249
+bd_reset m3		// Leone 12 Gauge Super
+bd_reset m4a1		// Maverick M4A1 Carbine
+bd_reset mac10		// Ingram MAC-10
+bd_reset mp5navy	// KM Sub-Machine Gun
+bd_reset p228		// 228 Compact
+bd_reset p90		// ES C90
+bd_reset scout		// Schmidt Scout
+bd_reset sg550		// Krieg 550 Commando
+bd_reset sg552		// Krieg 552
+bd_reset tmp		// Schmidt Machine Pistol
+bd_reset usp		// KM .45 Tactical
+bd_reset ump45		// KM UMP45
+bd_reset xm1014		// Leone YG1265 Auto Shotgun
+
+// Integers
+bd_reset 1		// 228 Compact
+bd_reset 3		// Schmidt Scout
+bd_reset 4		// HE Grenade
+bd_reset 5		// Leone YG1265 Auto Shotgun
+bd_reset 7		// Ingram MAC-10
+bd_reset 8		// Bullpup
+bd_reset 10		// .40 Dual Elites
+bd_reset 11		// ES Five-Seven
+bd_reset 12		// KM UMP45
+bd_reset 13		// Krieg 550 Commando
+bd_reset 14		// IDF Defender
+bd_reset 15		// Clarion 5.56
+bd_reset 16		// KM .45 Tactical
+bd_reset 17		// 9x19mm Sidearm
+bd_reset 18		// Magnum Sniper Rifle
+bd_reset 19		// KM Sub-Machine Gun
+bd_reset 20		// M249
+bd_reset 21		// Leone 12 Gauge Super
+bd_reset 22		// Maverick M4A1 Carbine
+bd_reset 23		// Schmidt Machine Pistol
+bd_reset 24		// D3/AU1
+bd_reset 26		// Night Hawk .50C
+bd_reset 27		// Krieg 552
+bd_reset 28		// CV-47
+bd_reset 29		// Knife
+bd_reset 30		// ES C90

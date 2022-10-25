@@ -10,7 +10,7 @@
 	
 	Zombie Plague Burning Zombie
 	by schmurgel1983(@msn.com)
-	Copyright (C) 2010-2011 schmurgel1983, skhowl, gesalzen
+	Copyright (C) 2010-2022 schmurgel1983, skhowl, gesalzen
 	
 	This program is free software: you can redistribute it and/or modify it
 	under the terms of the GNU General Public License as published by the

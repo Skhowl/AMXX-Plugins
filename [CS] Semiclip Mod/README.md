@@ -5,7 +5,7 @@
 + [Requirements](#requirements-)
 + [Other Versions](#other-versions-)
 + [Youtube](#youtube-)
-+ [Plugin Customization Section](#plugin-customization-section-)
++ [Plugin Customization](#plugin-customization-)
 + [Supported Entities](#supported-entities-)
 + [To Do List](#to-do-list-)
 + [Credits](#credits-)
@@ -42,7 +42,7 @@
 + [v3.1.0 func_door_rotating showcase](https://www.youtube.com/watch?v=L8tVNr-Mjxc)
 + [v3.2.0 knife trace fix](https://www.youtube.com/watch?v=K1hYlyZ67W8)
 
-### Plugin Customization Section: [🡅](#semiclip-mod-v332)
+### Plugin Customization: [🡅](#semiclip-mod-v332)
 ```
 const Float:CVAR_INTERVAL  = 6.0 /* ¬ 6.0 */
 const Float:SPEC_INTERVAL  = 0.2 /* ¬ 0.2 */

@@ -20,7 +20,7 @@ Attack speed can be change by cvar.
 + **Module**: fakemeta, hamsandwich
 
 ### Other Versions: [🡅](#executioner-zombie-v11)
-+ For **Zombie Plague 4.3** version click [here](../%5BZP43%5D%20Class%20-%20Executioner%20Zombie).
++ For **Zombie Plague 4.3** version click [here](../%5BZP43%5D%20Zombie%20-%20Executioner).
 
 ### Known Bugs: [🡅](#executioner-zombie-v11)
 ```

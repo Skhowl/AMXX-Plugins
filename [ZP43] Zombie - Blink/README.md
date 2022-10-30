@@ -21,7 +21,7 @@ CZ bots are all time healing, bots are stupit and don't press +use.
 + **Module**: fakemeta, hamsandwich
 
 ### Other Versions: [🡅](#blink-zombie-v12)
-+ For Zombie Plague 5.0 to 5.0.8a version click [here](../%5BZP50%5D%20Class%20-%20Blink%20Zombie).
++ For Zombie Plague 5.0 to 5.0.8a version click [here](../%5BZP50%5D%20Zombie%20-%20Blink).
 
 ### Youtube: [🡅](#blink-zombie-v12)
 + [Demonstration](http://www.youtube.com/watch?v=ZvzRNw_vh5o)

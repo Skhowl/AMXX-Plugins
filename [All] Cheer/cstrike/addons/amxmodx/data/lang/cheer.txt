@@ -1,0 +1,13 @@
+[en]
+CHEER_NOT_PRESENT = Soundfile ^"%s^" not present! Please re-upload the soundfile.
+CHEER_LOAD = Cannot load cheer file %s!
+CHEER_OPEN = Cannot open cheer file %s!
+CHEER_NEXT = Next cheer available in %.2f seconds.
+CHEER_ANNOUNCE = To use cheer command press ^"j^" (standard) or open console and type: bind j cheer
+
+[de]
+CHEER_NOT_PRESENT = Soundfile ^"%s^" nicht vorhanden! Bitte erneut hochladen.
+CHEER_LOAD = Cheer datei %s konnte nicht geladen werden!
+CHEER_OPEN = Cheer datei %s konnte nicht geoeffnet werden!
+CHEER_NEXT = Naechster cheer in %.2f sekunden ausfuehrbar.
+CHEER_ANNOUNCE = Fuer cheer kommando druecke ^"j^" (standard) oder oeffne konsole und gebe ein: bind j cheer

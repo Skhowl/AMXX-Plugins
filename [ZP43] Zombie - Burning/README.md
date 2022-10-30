@@ -22,7 +22,7 @@ After a frost grenade get madness too.
 + **Module**: fakemeta, hamsandwich
 
 ### Other Versions: [🡅](#burning-zombie-v10)
-+ For **Zombie Plague 5.0** version click [here](../%5BZP50%5D%20Class%20-%20Burning%20Zombie).
++ For **Zombie Plague 5.0** version click [here](../%5BZP50%5D%20Zombie%20-%20Burning).
 
 ### Known Bugs: [🡅](#burning-zombie-v10)
 ```

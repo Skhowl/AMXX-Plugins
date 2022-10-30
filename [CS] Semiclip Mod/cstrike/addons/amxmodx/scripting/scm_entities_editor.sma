@@ -38,7 +38,7 @@
  [Plugin Customization]
 =================================================================================*/
 
-#define MAX_STORAGE 64					/* Max stored entities per func_* ¬ 64 */
+#define MAX_STORAGE 64					/* Max stored entities per func_* Â¬ 64 */
 
 #define ADMIN_ACCESS_LEVEL ADMIN_RCON	/* Admin level for Editor */
 

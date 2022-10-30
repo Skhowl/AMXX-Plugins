@@ -3,7 +3,7 @@
 	-*- Licensing Info -*-
 	----------------------
 	
-	Semiclip Mod: Entity fix
+	Semiclip Mod: Entities fix
 	by schmurgel1983(@msn.com)
 	Copyright (C) 2014-2022 schmurgel1983, skhowl, gesalzen
 	
@@ -43,8 +43,8 @@
  [Plugin Customization]
 =================================================================================*/
 
-#define MAX_PLAYERS		32	/* Server slots ¬ 32 */
-#define MAX_ENT_ARRAY	128	/* Is for max 4096 entities (128*32=4096) ¬ 128 */
+#define MAX_PLAYERS		32	/* Server slots Â¬ 32 */
+#define MAX_ENT_ARRAY	128	/* Is for max 4096 entities (128*32=4096) Â¬ 128 */
 
 /*================================================================================
  Customization ends here! Yes, that's it. Editing anything beyond
@@ -68,11 +68,12 @@ new g_iClientDisconnect,
 new Trie:TrieFunctions = Invalid_Trie
 
 /* Hamsandwich */
-new HamHook:g_iHamFuncForwards[16] /* Max supported entity classes ¬ 16 */
+new HamHook:g_iHamFuncForwards[16] /* Max supported entity classes Â¬ 16 */
 
 /* Client */
 new Float:g_flAbsMin[MAX_PLAYERS+1][3],
-	Float:g_flAbsMax[MAX_PLAYERS+1][3]
+	Float:g_flAbsMax[MAX_PLAYERS+1][3],
+	Float:g_flAbsMaxDucking[MAX_PLAYERS+1][3]
 
 /* Bitsum */
 new bs_IsAlive,
@@ -119,7 +120,7 @@ public plugin_natives()
 
 public plugin_init()
 {
-	register_plugin("[SCM] Entity movement", "1.2.12", "schmurgel1983")
+	register_plugin("[SCM] Entities fix", "1.2.13", "schmurgel1983")
 	
 	new Float:flValue, iValue
 	flValue = float(global_get(glb_maxEntities)) / 32
@@ -267,6 +268,7 @@ public fw_EntitySemiclip_End(id) <entities>
 	state players
 	SetupPlayers(true, id)
 }
+
 public fw_EntitySemiclip_End(id) <players> { /* Do nothing */ }
 
 public fw_AbsBoxClashing(id) <entities>
@@ -284,14 +286,12 @@ public fw_AbsBoxClashing(id) <entities>
 	{
 		if (pev(id, pev_flags) & FL_DUCKING)
 		{
-			static Float:fTemp[3], Float:fViewOfs
-			pev(id, pev_view_ofs, fTemp)
-			fViewOfs = fTemp[2]
+			static Float:fViewOfs[3]
+			pev(id, pev_view_ofs, fViewOfs)
+			pev(id, pev_maxs, g_flAbsMaxDucking[id])
+			g_flAbsMaxDucking[id][2] = fViewOfs[2] + 3.0
 			
-			pev(id, pev_maxs, fTemp)
-			fTemp[2] = fViewOfs + 3.0
-			
-			set_pev(id, pev_maxs, fTemp)
+			set_pev(id, pev_maxs, g_flAbsMaxDucking[id])
 			add_bitsum(bs_IsDucking, id)
 		}
 		
@@ -300,19 +300,13 @@ public fw_AbsBoxClashing(id) <entities>
 		g_iLastClashed = id
 	}
 }
+
 public fw_AbsBoxClashing(id) <players>
 {
 	if (!is_user_valid_alive(id) || !get_bitsum(bs_IsDucking, id))
 		return
 	
-	static Float:fTemp[3], Float:fViewOfs
-	pev(id, pev_view_ofs, fTemp)
-	fViewOfs = fTemp[2]
-	
-	pev(id, pev_maxs, fTemp)
-	fTemp[2] = fViewOfs + 3.0
-	
-	set_pev(id, pev_maxs, fTemp)
+	set_pev(id, pev_maxs, g_flAbsMaxDucking[id])
 }
 
 SetupPlayers(id, i) <entities>
@@ -340,6 +334,7 @@ SetupPlayers(id, i) <entities>
 		}
 	}
 }
+
 SetupPlayers(id, i) <players>
 {
 	#pragma unused i

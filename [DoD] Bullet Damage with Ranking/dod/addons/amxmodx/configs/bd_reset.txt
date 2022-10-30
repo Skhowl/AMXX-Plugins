@@ -1,0 +1,67 @@
+//
+// All possible bd_reset commands!
+//
+
+// Strings
+bd_reset all		// All Records!
+bd_reset amer		// Field Combat Knife
+bd_reset bar		// BAR
+bd_reset bazooka	// Bazooka
+bd_reset bren		// Bren
+bd_reset colt		// Colt 1911 Pistol
+bd_reset enfield	// Enfield
+bd_reset fg42		// FG42
+bd_reset garand		// M1 Garand
+bd_reset ger		// Fairbairn Sykes Combat Knife
+bd_reset grease		// Greasegun
+bd_reset hand		// Fragmentation Grenade
+bd_reset kar		// K98
+bd_reset k43		// K43
+bd_reset luger		// Luger '08 Pistol
+bd_reset mg34		// MG34
+bd_reset mg42		// MG42
+bd_reset mp40		// MP40
+bd_reset mp44		// STG44
+bd_reset m1			// M1 Carbine
+bd_reset piat		// Piat
+bd_reset pschreck	// Panzerschreck
+bd_reset panzer		// Panzerschreck
+bd_reset scoped		// Scoped K98
+bd_reset spade		// Field Spade
+bd_reset spring		// Springfield
+bd_reset sten		// Sten
+bd_reset stick		// Stick Grenade
+bd_reset thomp		// Thompson
+bd_reset webley		// Webley Revolver
+bd_reset 30cal		// .30 caliber
+
+// Integers
+bd_reset 1		// Field Combat Knife
+bd_reset 2		// Fairbairn Sykes Combat Knife
+bd_reset 3		// Colt 1911 Pistol
+bd_reset 4		// Luger '08 Pistol
+bd_reset 5		// M1 Garand
+bd_reset 6		// Scoped K98
+bd_reset 7		// Thompson
+bd_reset 8		// STG44
+bd_reset 9		// Springfield
+bd_reset 10		// K98
+bd_reset 11		// BAR
+bd_reset 12		// MP40
+bd_reset 13		// Fragmentation Grenade
+bd_reset 14		// Stick Grenade
+bd_reset 17		// MG42
+bd_reset 18		// .30 caliber
+bd_reset 19		// Field Spade
+bd_reset 20		// M1 Carbine
+bd_reset 21		// MG34
+bd_reset 22		// Greasegun
+bd_reset 23		// FG42
+bd_reset 24		// K43
+bd_reset 25		// Enfield
+bd_reset 26		// Sten
+bd_reset 27		// Bren
+bd_reset 28		// Webley Revolver
+bd_reset 29		// Bazooka
+bd_reset 30		// Panzerschreck
+bd_reset 31		// Piat

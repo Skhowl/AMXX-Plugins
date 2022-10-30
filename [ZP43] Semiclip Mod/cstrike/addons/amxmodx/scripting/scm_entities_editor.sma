@@ -3,7 +3,7 @@
 	-*- Licensing Info -*-
 	----------------------
 	
-	Semiclip Mod: Entity Editor
+	Semiclip Mod: Entities Editor
 	by schmurgel1983(@msn.com)
 	Copyright (C) 2014-2022 schmurgel1983, skhowl, gesalzen
 	
@@ -38,7 +38,7 @@
  [Plugin Customization]
 =================================================================================*/
 
-#define MAX_STORAGE 64					/* Max stored entities per func_* ¬ 64 */
+#define MAX_STORAGE 64	/* Max stored entities per func_* ¬ 64 */
 
 #define ADMIN_ACCESS_LEVEL ADMIN_RCON	/* Admin level for Editor */
 
@@ -182,7 +182,7 @@ public plugin_precache()
 public plugin_init()
 {
 	/* Register plugin */
-	register_plugin("[SCM] Entity Editor", "1.3.2", "schmurgel1983");
+	register_plugin("[SCM] Entities Editor", "1.3.2", "schmurgel1983");
 	
 	/* Multi-Language */
 	#if AMXX_VERSION_NUM >= 183

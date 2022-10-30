@@ -106,8 +106,8 @@ new g_iMaxPlayers
 #define get_bitsum_array(%1,%2)   (%1[(%2-1)/32] &   (1<<((%2-1)&31)))
 #define add_bitsum_array(%1,%2)    %1[(%2-1)/32] |=  (1<<((%2-1)&31));
 
-#define is_user_valid(%1)			(1 <= %1 <= g_iMaxPlayers)
-#define is_user_valid_alive(%1)		(1 <= %1 <= g_iMaxPlayers && get_bitsum(bs_IsAlive, %1))
+#define is_user_valid(%1)         (1 <= %1 <= g_iMaxPlayers)
+#define is_user_valid_alive(%1)   (1 <= %1 <= g_iMaxPlayers && get_bitsum(bs_IsAlive, %1))
 
 /*================================================================================
  [Natives, Init and Cfg]

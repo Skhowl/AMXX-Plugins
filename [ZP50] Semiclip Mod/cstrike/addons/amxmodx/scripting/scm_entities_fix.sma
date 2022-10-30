@@ -43,8 +43,8 @@
  [Plugin Customization]
 =================================================================================*/
 
-#define MAX_PLAYERS		32	/* Server slots ¬ 32 */
-#define MAX_ENT_ARRAY	128	/* Is for max 4096 entities (128*32=4096) ¬ 128 */
+#define MAX_PLAYERS		32	/* Server slots Â¬ 32 */
+#define MAX_ENT_ARRAY	128	/* Is for max 4096 entities (128*32=4096) Â¬ 128 */
 
 /*================================================================================
  Customization ends here! Yes, that's it. Editing anything beyond
@@ -68,7 +68,7 @@ new g_iClientDisconnect,
 new Trie:TrieFunctions = Invalid_Trie
 
 /* Hamsandwich */
-new HamHook:g_iHamFuncForwards[16] /* Max supported entity classes ¬ 16 */
+new HamHook:g_iHamFuncForwards[16] /* Max supported entity classes Â¬ 16 */
 
 /* Client */
 new Float:g_flAbsMin[MAX_PLAYERS+1][3],

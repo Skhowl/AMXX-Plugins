@@ -10,7 +10,7 @@
 ### Description: [🡅](#no-engine-knockback-v111)
 ```
 This plugin does not remove ZP knockback just the engine knockback.
-The cs/cz engine knockback is little but noticeable.
+The CS 1.6 and CS:CZ engine knockback is little but noticeable.
 ```
 
 ### Requirements: [🡅](#no-engine-knockback-v111)

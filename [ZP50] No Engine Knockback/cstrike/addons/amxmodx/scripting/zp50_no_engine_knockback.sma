@@ -60,29 +60,10 @@
 	* AMXX: Version 1.8.2 can be downloaded under: https://www.amxmodx.org/downloads.php
 	* Module: fakemeta, hamsandwich
 	
-	-----------------
-	-*- Changelog -*-
-	-----------------
-	
-	* v1.0.0:
-	   - Initial release Privat (13th Aug 2010)
-	   - Initial release Alliedmodders (4th Feb 2011)
-	
-	* v1.1.0:
-	   - Added: cvars for nemesis and zombies,
-	      human and survivor don't need to
-		  disable the engine knockback
-	
 =================================================================================*/
 
 #include <amxmodx>
 #include <fakemeta>
-#include <xs>
-
-#if AMXX_VERSION_NUM < 180
-	#assert AMX Mod X v1.8.0 or later library required!
-#endif
-
 #include <hamsandwich>
 
 /*================================================================================
@@ -107,7 +88,7 @@ new const PLUGIN_VERSION[] = "1.1.1 (zp50)"
 
 // Player vars
 new Float:g_flKnockbackPre[33][3] // velocity from your knockback position
-new bool:g_bEnabled[33] // disabled engine knockback is enable
+new g_bEnabled[33] // disabled engine knockback is enable
 
 // Cvar pointers
 new cvar_Nemesis, cvar_Zombies
@@ -118,16 +99,16 @@ new cvar_Nemesis, cvar_Zombies
 
 public plugin_precache()
 {
-	register_plugin("[ZP] Addon : No Engine Knockback", PLUGIN_VERSION, "schmurgel1983")
+	register_plugin("[ZP50] Addon : No Engine Knockback", PLUGIN_VERSION, "schmurgel1983")
 }
 
 public plugin_init()
 {
 	// HAM Forwards
-	RegisterHam(Ham_TakeDamage, "player", "fwd_TakeDamage")
-	RegisterHamBots(Ham_TakeDamage, "fwd_TakeDamage")
-	RegisterHam(Ham_TakeDamage, "player", "fwd_TakeDamage_Post", 1)
-	RegisterHamBots(Ham_TakeDamage, "fwd_TakeDamage_Post", 1)
+	RegisterHam(Ham_TakeDamage, "player", "fwd_TakeDamage", false)
+	RegisterHamBots(Ham_TakeDamage, "fwd_TakeDamage", false)
+	RegisterHam(Ham_TakeDamage, "player", "fwd_TakeDamage_Post", true)
+	RegisterHamBots(Ham_TakeDamage, "fwd_TakeDamage_Post", true)
 	
 	cvar_Nemesis = register_cvar("zp_nek_nemesis", "1")
 	cvar_Zombies = register_cvar("zp_nek_zombies", "0")
@@ -183,16 +164,7 @@ public fwd_TakeDamage_Post(victim)
 }
 
 public zp_fw_core_cure_post(id)
-	g_bEnabled[id] = false
+	g_bEnabled[id] = 0;
 
 public zp_fw_core_infect_post(id, attacker)
-{
-	new nemesis = (LibraryExists(LIBRARY_NEMESIS, LibType_Library) && zp_class_nemesis_get(id)) ? 1 : 0;
-	
-	if (nemesis && get_pcvar_num(cvar_Nemesis))
-		g_bEnabled[id] = true
-	else if (!nemesis && get_pcvar_num(cvar_Zombies))
-		g_bEnabled[id] = true
-	else
-		g_bEnabled[id] = false
-}
+	g_bEnabled[id] = (LibraryExists(LIBRARY_NEMESIS, LibType_Library) && zp_class_nemesis_get(id)) ? get_pcvar_num(cvar_Nemesis) : get_pcvar_num(cvar_Zombies);

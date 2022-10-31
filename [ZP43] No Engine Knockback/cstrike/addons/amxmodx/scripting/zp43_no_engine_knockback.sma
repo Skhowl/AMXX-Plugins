@@ -60,29 +60,10 @@
 	* AMXX: Version 1.8.2 can be downloaded under: https://www.amxmodx.org/downloads.php
 	* Module: fakemeta, hamsandwich
 	
-	-----------------
-	-*- Changelog -*-
-	-----------------
-	
-	* v1.0.0:
-	   - Initial release Privat (13th Aug 2010)
-	   - Initial release Alliedmodders (4th Feb 2011)
-	
-	* v1.1.0:
-	   - Added: cvars for nemesis and zombies,
-	      human and survivor don't need to
-	      disable the engine knockback
-	
 =================================================================================*/
 
 #include <amxmodx>
 #include <fakemeta>
-#include <xs>
-
-#if AMXX_VERSION_NUM < 180
-	#assert AMX Mod X v1.8.0 or later library required!
-#endif
-
 #include <hamsandwich>
 
 /*================================================================================
@@ -103,7 +84,7 @@
 =================================================================================*/
 
 // Plugin Version
-new const PLUGIN_VERSION[] = "1.1.1"
+new const PLUGIN_VERSION[] = "1.1.1 (zp43)"
 
 /*================================================================================
  [Global Variables]
@@ -111,10 +92,10 @@ new const PLUGIN_VERSION[] = "1.1.1"
 
 // Player vars
 new Float:g_flKnockbackPre[33][3] // velocity from your knockback position
-new bool:g_bEnabled[33] // disable engine knockback
+new g_bEnabled[33] // disable engine knockback
 
 // Game vars
-new g_bHamCzBots // whether ham forwards are registered for CZ bots
+new bool:g_bHamCzBots = false // whether ham forwards are registered for CZ bots
 
 // Cvar pointers
 new cvar_BotQuota, cvar_Nemesis, cvar_Zombies
@@ -125,14 +106,14 @@ new cvar_BotQuota, cvar_Nemesis, cvar_Zombies
 
 public plugin_precache()
 {
-	register_plugin("[ZP] Addon : No Engine Knockback", PLUGIN_VERSION, "schmurgel1983")
+	register_plugin("[ZP43] Addon : No Engine Knockback", PLUGIN_VERSION, "schmurgel1983")
 }
 
 public plugin_init()
 {
 	// HAM Forwards "player"
-	RegisterHam(Ham_TakeDamage, "player", "fwd_TakeDamage")
-	RegisterHam(Ham_TakeDamage, "player", "fwd_TakeDamage_Post", 1)
+	RegisterHam(Ham_TakeDamage, "player", "fwd_TakeDamage", false)
+	RegisterHam(Ham_TakeDamage, "player", "fwd_TakeDamage_Post", true)
 	
 	cvar_Nemesis = register_cvar("zp_nek_nemesis", "1")
 	cvar_Zombies = register_cvar("zp_nek_zombies", "0")
@@ -183,17 +164,10 @@ public fwd_TakeDamage_Post(victim)
 }
 
 public zp_user_humanized_post(id)
-	g_bEnabled[id] = false
+	g_bEnabled[id] = 0;
 
 public zp_user_infected_post(id, infector, nemesis)
-{
-	if (nemesis && get_pcvar_num(cvar_Nemesis))
-		g_bEnabled[id] = true
-	else if (!nemesis && get_pcvar_num(cvar_Zombies))
-		g_bEnabled[id] = true
-	else
-		g_bEnabled[id] = false
-}
+	g_bEnabled[id] = (nemesis) ? get_pcvar_num(cvar_Nemesis) : get_pcvar_num(cvar_Zombies);
 
 /*================================================================================
  [Other Functions]

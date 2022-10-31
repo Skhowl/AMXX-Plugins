@@ -1,4 +1,4 @@
-# No Engine Knockback v1.1
+# No Engine Knockback v1.1.1
 **Zombie Plague v5.0 _(Recommended 5.0.8a)_**
 
 ### Content:
@@ -7,20 +7,20 @@
 + [Other Versions](#other-versions-)
 + [Youtube](#youtube-)
 
-### Description: [🡅](#no-engine-knockback-v11)
+### Description: [🡅](#no-engine-knockback-v111)
 ```
-This plugin disable the cs/cz engine knockback, but not the ZP knockback.
+This plugin does not remove ZP knockback just the engine knockback.
 The cs/cz engine knockback is little but noticeable.
 ```
 
-### Requirements: [🡅](#no-engine-knockback-v11)
+### Requirements: [🡅](#no-engine-knockback-v111)
 + **Game**: Counter-Strike 1.6 or Condition Zero
-+ **Metamod**: Version **1.19** or later
-+ **AMXX**: Version **1.8.0** or later
++ **Metamod**: Version [1.21p38](https://github.com/Bots-United/metamod-p/releases/tag/v1.21p38)
++ **AMXX**: Version [1.8.2](https://www.amxmodx.org/downloads.php)
 + **Module**: fakemeta, hamsandwich
 
-### Other Versions: [🡅](#no-engine-knockback-v11)
+### Other Versions: [🡅](#no-engine-knockback-v111)
 + For **Zombie Plague v4.3** version click [here](../%5BZP43%5D%20No%20Engine%20Knockback).
 
-### Youtube: [🡅](#no-engine-knockback-v11)
+### Youtube: [🡅](#no-engine-knockback-v111)
 + [Demonstration](http://www.youtube.com/watch?v=v4pdS02RAcE)

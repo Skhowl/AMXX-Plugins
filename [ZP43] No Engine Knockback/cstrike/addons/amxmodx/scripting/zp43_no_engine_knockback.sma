@@ -1,14 +1,14 @@
 /*================================================================================
 	
-		****************************************************
-		*********** [No engine knockback 1.1.0] ************
-		****************************************************
+		***********************************************
+		************ [No Engine Knockback] ************
+		***********************************************
 	
 	----------------------
 	-*- Licensing Info -*-
 	----------------------
 	
-	No engine knockback
+	No Engine Knockback
 	by schmurgel1983(@msn.com)
 	Copyright (C) 2010-2022 schmurgel1983, skhowl, gesalzen
 	
@@ -41,7 +41,7 @@
 	-*- Description -*-
 	-------------------
 	
-	This plugin disable the cs/cz engine knockback, but not the ZP knockback.
+	This plugin does not remove ZP knockback just the engine knockback.
 	The cs/cz engine knockback is little but noticeable.
 	
 	---------------------
@@ -56,8 +56,8 @@
 	--------------------
 	
 	* Game: Counter-Strike 1.6 or Condition Zero
-	* Metamod: Version 1.19 or later
-	* AMXX: Version 1.8.0 or later
+	* Metamod: Version 1.21p38 can be downloaded under: https://github.com/Bots-United/metamod-p/releases/tag/v1.21p38
+	* AMXX: Version 1.8.2 can be downloaded under: https://www.amxmodx.org/downloads.php
 	* Module: fakemeta, hamsandwich
 	
 	-----------------
@@ -103,15 +103,15 @@
 =================================================================================*/
 
 // Plugin Version
-new const PLUGIN_VERSION[] = "1.1.0"
+new const PLUGIN_VERSION[] = "1.1.1"
 
 /*================================================================================
  [Global Variables]
 =================================================================================*/
 
 // Player vars
-new Float:g_Knockback[33][3] // velocity from your knockback position
-new g_bEnable[33] // disabled engine knockback is enable
+new Float:g_flKnockbackPre[33][3] // velocity from your knockback position
+new bool:g_bEnabled[33] // disable engine knockback
 
 // Game vars
 new g_bHamCzBots // whether ham forwards are registered for CZ bots
@@ -165,37 +165,34 @@ public client_putinserver(id)
 // Ham Take Damage Forward
 public fwd_TakeDamage(victim, inflictor, attacker, Float:damage, damage_type)
 {
-	if (!g_bEnable[victim]) return;
+	if (!g_bEnabled[victim])
+		return;
 	
-	// Engine Knockback disabled
-	pev(victim, pev_velocity, g_Knockback[victim])
+	// Get velocity befor engine knockback kicks in
+	pev(victim, pev_velocity, g_flKnockbackPre[victim])
 }
 
 // Ham Take Damage Post Forward
 public fwd_TakeDamage_Post(victim)
 {
-	if (!g_bEnable[victim]) return;
+	if (!g_bEnabled[victim])
+		return;
 	
-	// Engine Knockback disabled
-	static Float:push[3]
-	pev(victim, pev_velocity, push)
-	xs_vec_sub(push, g_Knockback[victim], push)
-	xs_vec_mul_scalar(push, 0.0, push)
-	xs_vec_add(push, g_Knockback[victim], push)
-	set_pev(victim, pev_velocity, push)
+	// Restore velocity after engine knockback is added
+	set_pev(victim, pev_velocity, g_flKnockbackPre[victim])
 }
 
 public zp_user_humanized_post(id)
-	g_bEnable[id] = false
+	g_bEnabled[id] = false
 
 public zp_user_infected_post(id, infector, nemesis)
 {
 	if (nemesis && get_pcvar_num(cvar_Nemesis))
-		g_bEnable[id] = true
+		g_bEnabled[id] = true
 	else if (!nemesis && get_pcvar_num(cvar_Zombies))
-		g_bEnable[id] = true
+		g_bEnabled[id] = true
 	else
-		g_bEnable[id] = false
+		g_bEnabled[id] = false
 }
 
 /*================================================================================
